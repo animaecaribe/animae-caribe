@@ -1,7 +1,7 @@
 'use client';
 
 import Image from 'next/image';
-import {useEffect, useState} from 'react';
+import {useEffect, useMemo, useState} from 'react';
 
 export type SpeakerFlyer = {
   name: string;
@@ -14,6 +14,17 @@ type SpeakerFlyerGridProps = {
 
 export default function SpeakerFlyerGrid({flyers}: SpeakerFlyerGridProps) {
   const [selectedFlyer, setSelectedFlyer] = useState<SpeakerFlyer | null>(null);
+  const [query, setQuery] = useState('');
+  const sortedFlyers = useMemo(
+    () => [...flyers].sort((a, b) => a.name.localeCompare(b.name)),
+    [flyers]
+  );
+  const visibleFlyers = useMemo(() => {
+    const normalizedQuery = query.trim().toLocaleLowerCase();
+    if (!normalizedQuery) return sortedFlyers;
+
+    return sortedFlyers.filter((flyer) => flyer.name.toLocaleLowerCase().includes(normalizedQuery));
+  }, [query, sortedFlyers]);
 
   useEffect(() => {
     if (!selectedFlyer) return;
@@ -34,8 +45,20 @@ export default function SpeakerFlyerGrid({flyers}: SpeakerFlyerGridProps) {
 
   return (
     <>
+      <div className="speaker-flyer-search">
+        <label htmlFor="speaker-search">Search</label>
+        <input
+          autoComplete="off"
+          id="speaker-search"
+          onChange={(event) => setQuery(event.target.value)}
+          placeholder="Speaker name"
+          type="search"
+          value={query}
+        />
+      </div>
+
       <div className="speaker-flyer-grid">
-        {flyers.map((flyer) => (
+        {visibleFlyers.map((flyer) => (
           <article className="speaker-flyer-card glass-card" key={flyer.name}>
             <button
               aria-label={`Expand flyer for ${flyer.name}`}
@@ -56,6 +79,10 @@ export default function SpeakerFlyerGrid({flyers}: SpeakerFlyerGridProps) {
           </article>
         ))}
       </div>
+
+      {visibleFlyers.length === 0 ? (
+        <p className="speaker-flyer-empty">No speakers found for “{query.trim()}”.</p>
+      ) : null}
 
       {selectedFlyer ? (
         <div
