@@ -3,7 +3,7 @@ import type {Metadata} from 'next';
 import SpeakerFlyerGrid, {type SpeakerFlyer} from '@/components/SpeakerFlyerGrid';
 
 export const metadata: Metadata = {
-  title: 'ACF26 Algorythmacy Speakers | Animae Caribe',
+  title: 'ACF26 Algorithmacy Speakers | Animae Caribe',
   description: 'Private page for Animae Caribe Festival 2026 guest speakers.',
   robots: {
     index: false,
