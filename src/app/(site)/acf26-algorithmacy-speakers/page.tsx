@@ -17,7 +17,7 @@ const flyers: SpeakerFlyer[] = [
   {name: 'Antonio Mele', src: '/assets/acf26-speaker-flyers/antonio-mele.jpg'},
   {name: 'Antonio Scala', src: '/assets/acf26-speaker-flyers/antonio-scala.jpg'},
   {name: 'Brad Schiff', src: '/assets/acf26-speaker-flyers/brad-schiff.jpg'},
-  {name: 'Bruce W. Smith', src: '/assets/acf26-speaker-flyers/bruce-w-smith.jpg'},
+  {name: 'Bruce W. Smith', src: '/assets/acf26-speaker-flyers/bruce-w-smith-v2.jpg'},
   {name: 'Chevonnese Chevers Whyte', src: '/assets/acf26-speaker-flyers/chevonnese-chevers-whyte.jpg'},
   {name: 'Chris Lavis', src: '/assets/acf26-speaker-flyers/chris-lavis-v2.jpg'},
   {name: 'Denise Khumalo', src: '/assets/acf26-speaker-flyers/denise-khumalo.jpg'},

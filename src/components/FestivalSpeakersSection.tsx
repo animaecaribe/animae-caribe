@@ -36,7 +36,7 @@ function sortPeople(people?: SanityPerson[] | null) {
   }
 
   return [...people]
-    .filter((person) => person.active !== false && person.name)
+    .filter((person) => person.active !== false && person.name && !/tyree/i.test(person.name))
     .sort((left, right) => {
       const leftOrder = typeof left.sortOrder === 'number' ? left.sortOrder : Number.MAX_SAFE_INTEGER;
       const rightOrder = typeof right.sortOrder === 'number' ? right.sortOrder : Number.MAX_SAFE_INTEGER;
