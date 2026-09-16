@@ -19,7 +19,7 @@ type AboutTeaserProps = {
 export default function AboutTeaser({
   kicker = 'About us',
   title = 'A creative house for Caribbean animation, talent and digital storytelling.',
-  copy = 'Animae Caribe House brings digital creatives together around animation, story development, visual culture and community. The website should feel like a living showcase: cinematic, inviting and built to grow as new work, articles and updates are added.',
+  copy = 'Animae Caribe House brings artists, animators and storytellers together to develop ideas and create animated work. Rooted in the Caribbean, the House supports story development, creative production and collaboration, connecting regional talent with projects and partners at home and abroad.',
   body,
   ctaHref = '/about',
   ctaLabel = 'Read about the house',

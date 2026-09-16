@@ -206,8 +206,8 @@ export function NewsMediaEmptyState() {
       <span className="section-kicker">No posts yet</span>
       <h2>Stories and videos will appear here soon.</h2>
       <p>
-        Add visible articles in Sanity or import approved YouTube videos, and this archive will publish them in date
-        order.
+        There are no published stories or videos to browse yet. Visit the House and Festival pages to learn
+        about our creative work and programme.
       </p>
     </div>
   );

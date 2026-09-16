@@ -103,7 +103,7 @@ export default function ShowreelModal() {
                 <span className="section-kicker">{variant === 'festival' ? 'Festival reel' : 'Showreel'}</span>
                 <h2>{variant === 'festival' ? 'Festival showreel coming soon.' : 'Showreel coming soon.'}</h2>
                 <p>
-                  Add a dedicated {variant === 'festival' ? 'Festival' : 'House'} Mux playback ID to enable this reel.
+                  The {variant === 'festival' ? 'Festival' : 'House'} reel is not currently available. Please check back to watch highlights of our work.
                 </p>
               </div>
             </div>

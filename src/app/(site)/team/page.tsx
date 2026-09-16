@@ -9,16 +9,16 @@ export default function Team() {
         <span className="section-kicker">Team</span>
         <h1>The creative minds behind Animae Caribe House.</h1>
         <p>
-          Replace the placeholder with the final group shot, then add individual team cards once names, roles and bios are approved.
+          Animae Caribe brings together artists, animators, producers and creative organisers who share a commitment to Caribbean storytelling. Our work spans production, learning and the Festival, with collaboration at its heart.
         </p>
       </div>
 
       <div className="container team-page-card glass-card">
-        <img src="/assets/studio-placeholder.webp" alt="Team group shot placeholder" />
+        <img src="/assets/team.webp" alt="Animae Caribe team and creative community" />
         <div>
-          <h2>One strong group image first.</h2>
+          <h2>Working together, sharing our stories.</h2>
           <p>
-            This keeps the first version simple and polished. A later phase can introduce detailed profiles for directors, animators, producers, writers, designers and collaborators.
+            Behind every project and gathering are people who contribute their craft, experience and care. Together, we support new voices, develop creative ideas and help Caribbean stories reach audiences near and far.
           </p>
         </div>
       </div>

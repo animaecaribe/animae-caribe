@@ -104,8 +104,8 @@ function normalizeStats(items?: Array<Stat | SanityCardItem>) {
 
 export default function StatsSection({
   kicker = 'Reach and impact',
-  title = 'Numbers that can grow with the story.',
-  intro = 'Replace these starter values with confirmed figures for years, creators, countries, completed projects or hours of animation produced.',
+  title = 'Caribbean stories. Lasting connections.',
+  intro = 'Since 2001, Animae Caribe has championed Caribbean animation, bringing emerging artists together with experienced industry voices. Through screenings, workshops and creative exchange, we help regional talent develop their craft, share their stories and connect with opportunities beyond the Caribbean.',
   items,
 }: StatsSectionProps) {
   const renderedStats = normalizeStats(items);

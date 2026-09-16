@@ -37,12 +37,12 @@ export default function PastFestivalEditionsPage({editions, currentYear}: PastFe
             <span className="section-kicker">Festival Archive</span>
             <h1>Past Editions</h1>
             <p>
-              Explore previous Animae Caribe Festival editions through their events and programme history, with more
-              archive layers ready to grow later.
+              Explore the events and programmes of previous Animae Caribe Festivals, from screenings and workshops
+              to conversations connecting Caribbean creators with the wider animation community.
             </p>
           </div>
           <div className="festival-programme-page-meta">
-            <p>Current programme routes remain under Festival {currentYear} while earlier editions live here.</p>
+            <p>Looking for this year’s events? Explore the {currentYear} Festival programme.</p>
             <div className="festival-programme-page-actions">
               <ButtonLink href="/festival" variant="outline">
                 Festival Home <ArrowRightIcon />
@@ -78,8 +78,8 @@ export default function PastFestivalEditionsPage({editions, currentYear}: PastFe
               <span className="section-kicker">Archive updates</span>
               <h2>No past editions are available yet.</h2>
               <p>
-                Once earlier Festival Edition documents are published in Sanity, their event archives will appear here
-                automatically.
+                Earlier programmes are not currently available to browse. Visit the Festival page to explore the
+                current programme and learn about Animae Caribe.
               </p>
               <ButtonLink href="/festival" variant="primary">
                 Return to Festival Home <ArrowRightIcon />

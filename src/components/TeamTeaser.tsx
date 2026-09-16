@@ -24,7 +24,7 @@ function buildFeatureImageUrl(image?: SanityImageSource | null) {
 export default function TeamTeaser({
   kicker = 'The team',
   title = 'The people behind the pixels, stories and community.',
-  copy = 'Use this section for one strong group photo and a short, warm introduction to the team. The detailed Team page can later show individual profiles, roles, bios and creative credits.',
+  copy = 'We are artists, animators, storytellers and creative organisers brought together by a belief in Caribbean imagination. From developing stories at the House to welcoming new voices at the Festival, our work connects creativity, learning and community—helping stories rooted in our region find their place in the world.',
   body,
   image,
   showImage = true,

@@ -9,14 +9,14 @@ export default function Portfolio() {
     <section className="page-section">
       <div className="container page-hero centered narrow-heading">
         <span className="section-kicker">Portfolio</span>
-        <h1>Featured projects and production windows.</h1>
+        <h1>Animation, design and story development.</h1>
         <p>
-          Start with image-led project cards. Later, each card can link to a dedicated case study, embedded video, credits and behind-the-scenes article.
+          Explore character design, visual development and creative concepts from Animae Caribe House. These works offer a look at how ideas take shape through storytelling, design and animation.
         </p>
       </div>
 
       <div className="container work-grid large-grid">
-        {featuredProjects.concat(featuredProjects).map((project, index) => (
+        {featuredProjects.map((project, index) => (
           <article className="work-card glass-card" key={`${project.title}-${index}`}>
             <img src={project.image} alt="" />
             <div className="work-card-body">

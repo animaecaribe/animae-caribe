@@ -149,7 +149,7 @@ export default function HouseExperience({content, partners, posts}: HouseExperie
           title={content?.aboutSection?.heading || 'A creative house for Caribbean animation, talent and digital storytelling.'}
           copy={
             content?.aboutSection?.plainText ||
-            'Animae Caribe House brings digital creatives together around animation, story development, visual culture and community. The website should feel like a living showcase: cinematic, inviting and built to grow as new work, articles and updates are added.'
+            'Animae Caribe House brings artists, animators and storytellers together to develop ideas and create animated work. Rooted in the Caribbean, the House supports story development, creative production and collaboration, connecting regional talent with projects and partners at home and abroad.'
           }
           body={content?.aboutSection?.body}
           ctaHref={content?.aboutSection?.cta?.href || '/about'}
@@ -209,10 +209,10 @@ export default function HouseExperience({content, partners, posts}: HouseExperie
       {content?.statsSection?.isVisible !== false ? (
         <StatsSection
           kicker={content?.statsSection?.eyebrow || 'Reach and impact'}
-          title={content?.statsSection?.heading || 'Numbers that can grow with the story.'}
+          title={content?.statsSection?.heading || 'Caribbean stories. Lasting connections.'}
           intro={
             content?.statsSection?.intro ||
-            'Replace these starter values with confirmed figures for years, creators, countries, completed projects or hours of animation produced.'
+            'Since 2001, Animae Caribe has championed Caribbean animation, bringing emerging artists together with experienced industry voices. Through screenings, workshops and creative exchange, we help regional talent develop their craft, share their stories and connect with opportunities beyond the Caribbean.'
           }
           items={statsItems}
         />
@@ -224,7 +224,7 @@ export default function HouseExperience({content, partners, posts}: HouseExperie
           title={content?.teamSection?.heading || 'The people behind the pixels, stories and community.'}
           copy={
             content?.teamSection?.plainText ||
-            'Use this section for one strong group photo and a short, warm introduction to the team. The detailed Team page can later show individual profiles, roles, bios and creative credits.'
+            'We are artists, animators, storytellers and creative organisers brought together by a belief in Caribbean imagination. From developing stories at the House to welcoming new voices at the Festival, our work connects creativity, learning and community—helping stories rooted in our region find their place in the world.'
           }
           body={content?.teamSection?.body}
           image={content?.teamSection?.image}
@@ -255,7 +255,7 @@ export default function HouseExperience({content, partners, posts}: HouseExperie
       {content?.newsSection?.isVisible !== false ? (
         <NewsTeaser
           kicker={content?.newsSection?.eyebrow || 'News and articles'}
-          title={content?.newsSection?.heading || 'A place for updates while events are happening.'}
+          title={content?.newsSection?.heading || 'News from the House and Festival.'}
           copy={content?.newsSection?.showBody !== false ? content?.newsSection?.plainText : undefined}
           body={content?.newsSection?.showBody !== false ? content?.newsSection?.body : undefined}
           ctaHref={content?.newsSection?.cta?.href || '/news-media'}

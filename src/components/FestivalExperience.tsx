@@ -242,12 +242,12 @@ export default function FestivalExperience({content, partners, events, currentPr
         <div className="container split-grid">
           <div>
             <span className="section-kicker">{content?.archiveTeaser?.eyebrow || 'Past Editions'}</span>
-            <h2>{content?.archiveTeaser?.heading || 'Festival archive coming into focus.'}</h2>
+            <h2>{content?.archiveTeaser?.heading || 'A history of Caribbean animation and exchange.'}</h2>
           </div>
           <p>
             {content?.archiveTeaser?.description ||
               content?.archiveTeaser?.plainText ||
-              'Past festival highlights, news, galleries, artist stories and edition-by-edition recaps can be added here later without changing the current House experience or introducing WordPress/Sanity yet.'}
+              'Discover the screenings, workshops and creative exchanges that have shaped Animae Caribe over the years. Our past editions trace a continuing commitment to Caribbean stories, emerging talent and connections across the animation industry.'}
           </p>
           <ButtonLink href={pastEditionsHref} variant="outline">
             {archiveCta?.label || 'Explore Past Editions'} <ArrowRightIcon />

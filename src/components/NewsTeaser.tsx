@@ -1,5 +1,4 @@
 import type {PortableTextBlock} from '@portabletext/types';
-import { articles } from '../data/articles';
 import PortableTextRenderer from '@/sanity/PortableTextRenderer';
 import ButtonLink from './ButtonLink';
 import { ArrowRightIcon } from './Icons';
@@ -32,7 +31,7 @@ function formatPostDate(date?: string) {
 
 function normalizePosts(posts?: SanityPostTeaser[] | null) {
   if (!posts?.length) {
-    return articles.slice(0, 3);
+    return [];
   }
 
   return posts.slice(0, 3).map((post) => ({
@@ -45,8 +44,8 @@ function normalizePosts(posts?: SanityPostTeaser[] | null) {
 
 export default function NewsTeaser({
   kicker = 'News and articles',
-  title = 'A place for updates while events are happening.',
-  copy,
+  title = 'News from the House and Festival.',
+  copy = 'Updates on creative projects, Festival events and the people shaping Caribbean animation.',
   body,
   ctaHref = '/news-media',
   ctaLabel = 'Read articles',
@@ -71,6 +70,7 @@ export default function NewsTeaser({
       </div>
 
       <div className="container article-grid compact">
+        {!items.length ? <p>There are no published updates to show here yet.</p> : null}
         {items.map((article) => (
           <article className="article-card glass-card" key={article.title}>
             <span>{article.category}</span>

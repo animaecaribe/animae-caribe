@@ -55,7 +55,7 @@ export default async function About() {
 
       <div className="container image-copy-grid page-feature">
         <div className="image-frame">
-          <img src="/assets/studio-placeholder.webp" alt="Animation studio placeholder" />
+          <img src="/assets/studio-placeholder.webp" alt="Animae Caribe creative studio" />
         </div>
         <div className="glass-panel content-panel">
           <h2>One ecosystem, two primary experiences.</h2>

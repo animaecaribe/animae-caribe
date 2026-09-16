@@ -56,7 +56,7 @@ export default async function UmbrellaHome() {
                 <p>
                   {aboutSection?.description ||
                     aboutSection?.plainText ||
-                    'This umbrella home will grow into the central point for Animae Caribe news, festival access, creative services, community stories and partner opportunities. For now, it gives visitors a clear map of the ecosystem while the Festival and House experiences remain distinct.'}
+                    'Animae Caribe supports Caribbean animation through creative production, learning and cultural exchange. The Festival brings artists, audiences and industry professionals together; the House develops stories and supports production. Together, they connect Caribbean creativity with a wider community of collaborators and audiences.'}
                 </p>
               ) : null}
               {aboutSection?.showCta !== false ? (
