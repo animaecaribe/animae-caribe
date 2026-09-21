@@ -11,6 +11,8 @@ import { festivalEvents, festivalHighlights, festivalPartners } from '../data/fe
 import type { Partner } from '../data/partners';
 import type { SanityCardItem, SanityEvent, SanityFestivalPage } from '../sanity/lib/types';
 import {resolvePastEditionsHref, resolveProgrammeHref} from '../lib/festivalRoutes';
+import {getPublicFestivalEventTitle} from '../lib/festivalContent';
+import {acf26Speakers} from '../data/acf26Speakers';
 
 type FestivalExperienceProps = {
   content?: SanityFestivalPage | null;
@@ -69,7 +71,7 @@ function normalizeEvents(events?: SanityEvent[] | null) {
       return {
       date: modernStart?.date || formatEventDate(event.date) || '',
       time: formatEventTimeRange(event.startDateTime, event.endDateTime, event.startTime, event.endTime),
-      title: event.title || '',
+      title: getPublicFestivalEventTitle(event.title),
       description: event.shortDescription || '',
       location: event.venue || '',
       category: event.eventType || event.attendanceType || 'Festival',
@@ -194,7 +196,7 @@ export default function FestivalExperience({content, partners, events, currentPr
         items={highlightCards}
       />
 
-      <FestivalSpeakersSection content={content?.speakersSection} />
+      <FestivalSpeakersSection content={content?.speakersSection} people={acf26Speakers} />
 
       <FestivalCalendarSection content={content?.calendarSection} />
 

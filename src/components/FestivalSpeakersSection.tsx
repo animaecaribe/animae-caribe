@@ -7,9 +7,14 @@ import type {SanityFestivalPage, SanityPerson} from '@/sanity/lib/types';
 
 type FestivalSpeakersSectionProps = {
   content?: SanityFestivalPage['speakersSection'] | null;
+  people?: SanityPerson[] | null;
 };
 
 function buildSpeakerImageUrl(image: SanityPerson['image'], width: number, height: number) {
+  if (image?.url?.startsWith('/')) {
+    return image.url;
+  }
+
   return urlForImage(image)?.width(width).height(height).fit('crop').auto('format').url() || image?.url;
 }
 
@@ -36,7 +41,7 @@ function sortPeople(people?: SanityPerson[] | null) {
   }
 
   return [...people]
-    .filter((person) => person.active !== false && person.name && !/tyree/i.test(person.name))
+    .filter((person) => person.active !== false && person.name && !/(?:tyree|alice\s+dizon\s+manuel)/i.test(person.name))
     .sort((left, right) => {
       const leftOrder = typeof left.sortOrder === 'number' ? left.sortOrder : Number.MAX_SAFE_INTEGER;
       const rightOrder = typeof right.sortOrder === 'number' ? right.sortOrder : Number.MAX_SAFE_INTEGER;
@@ -49,10 +54,10 @@ function sortPeople(people?: SanityPerson[] | null) {
     });
 }
 
-export default function FestivalSpeakersSection({content}: FestivalSpeakersSectionProps) {
+export default function FestivalSpeakersSection({content, people}: FestivalSpeakersSectionProps) {
   const [activeSpeakerId, setActiveSpeakerId] = useState<string | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-  const speakers = useMemo(() => sortPeople(content?.people), [content?.people]);
+  const speakers = useMemo(() => sortPeople(people || content?.people), [content?.people, people]);
   const activeSpeaker = activeSpeakerId ? speakers.find((speaker) => getSpeakerId(speaker) === activeSpeakerId) || null : null;
   const modalImageUrl = activeSpeaker ? buildSpeakerImageUrl(activeSpeaker.image, 960, 1080) : null;
   const modalImageAlt = activeSpeaker?.image?.alt || `${activeSpeaker?.name || 'Speaker'} portrait`;

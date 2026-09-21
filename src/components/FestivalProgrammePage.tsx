@@ -2,6 +2,7 @@ import ButtonLink from './ButtonLink';
 import {ArrowRightIcon, ExternalIcon} from './Icons';
 import type {SanityEvent, SanityFestivalEdition} from '../sanity/lib/types';
 import {getPastEditionsRoute} from '../lib/festivalRoutes';
+import {getPublicFestivalEventTitle} from '../lib/festivalContent';
 
 type ProgrammeItem = {
   dateKey: string;
@@ -124,7 +125,7 @@ function normalizeProgrammeItems(events?: SanityEvent[] | null): ProgrammeItem[]
         dateLabel: date.label,
         dateShortLabel: date.shortLabel,
         timeLabel: formatTimeLabel(event),
-        title: event.title || '',
+        title: getPublicFestivalEventTitle(event.title),
         description: event.shortDescription || '',
         venue: event.venue || 'Venue to be announced',
         category: event.eventType || 'Festival event',

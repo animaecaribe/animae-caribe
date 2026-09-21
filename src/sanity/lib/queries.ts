@@ -509,7 +509,7 @@ export async function getFestivalPage() {
 	      eyebrow,
 	      heading,
 	      description,
-	      "people": people[@->._id != null && coalesce(@->active, true) == true && !(lower(coalesce(@->name, "")) match "*tyree*")]->{
+	      "people": people[@->._id != null && coalesce(@->active, true) == true && !(lower(coalesce(@->name, "")) match "*tyree*") && !(lower(coalesce(@->name, "")) match "*alice*dizon*manuel*")]->{
 	        ${personProjection}
 	      }
 	    },
