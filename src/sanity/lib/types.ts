@@ -166,6 +166,7 @@ export type SanityVenueSection = {
 };
 
 export type SanityEvent = {
+  isVisible?: boolean;
   _id?: string;
   slug?: string;
   startDateTime?: string;

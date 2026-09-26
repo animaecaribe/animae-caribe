@@ -270,6 +270,7 @@ const personProjection = `
 `;
 
 const eventProjection = `
+  isVisible,
   _id,
   title,
   "slug": slug.current,
@@ -543,7 +544,7 @@ export async function getFestivalPage() {
       },
       maxEvents,
       cta,
-      "events": events[@->._id != null]->{
+      "events": events[@->._id != null && coalesce(@->isVisible, true) == true]->{
         ${eventProjection}
       }
     },
@@ -706,7 +707,7 @@ export async function getActiveFestivalEdition() {
 }
 
 export async function getFeaturedFestivalEvents() {
-  return sanityFetch<SanityEvent[]>(`*[_type == "event" && isFeatured == true] | order(startDateTime asc, date asc, startTime asc)[0...6]{
+  return sanityFetch<SanityEvent[]>(`*[_type == "event" && isFeatured == true && coalesce(isVisible, true) == true] | order(startDateTime asc, date asc, startTime asc)[0...6]{
     ${eventProjection}
   }`);
 }
@@ -719,6 +720,7 @@ export async function getUpcomingFestivalEventsByEdition(editionId: string, maxE
   return sanityFetch<SanityEvent[]>(
     `*[
       _type == "event" &&
+      coalesce(isVisible, true) == true &&
       references($editionId) &&
       (
         (defined(startDateTime) && startDateTime >= $now) ||
@@ -774,6 +776,7 @@ export async function getFestivalEventsByEdition(editionId: string) {
   return sanityFetch<SanityEvent[]>(
     `*[
       _type == "event" &&
+      coalesce(isVisible, true) == true &&
       references($editionId)
     ] | order(startDateTime asc, date asc, startTime asc){
       ${eventProjection}
@@ -783,7 +786,7 @@ export async function getFestivalEventsByEdition(editionId: string) {
 }
 
 export async function getAllFestivalEvents() {
-  return sanityFetch<SanityEvent[]>(`*[_type == "event"] | order(startDateTime asc, date asc, startTime asc){
+  return sanityFetch<SanityEvent[]>(`*[_type == "event" && coalesce(isVisible, true) == true] | order(startDateTime asc, date asc, startTime asc){
     ${eventProjection}
   }`);
 }

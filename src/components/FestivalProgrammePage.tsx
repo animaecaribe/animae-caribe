@@ -115,7 +115,7 @@ function normalizeProgrammeItems(events?: SanityEvent[] | null): ProgrammeItem[]
   }
 
   return events
-    .filter((event) => event.title && (event.startDateTime || event.date))
+    .filter((event) => event.isVisible !== false && event.title && (event.startDateTime || event.date))
     .map((event) => {
       const date = formatDateLabel(event.startDateTime, event.date);
       const actionHref = event.ticketUrl || event.registrationUrl;

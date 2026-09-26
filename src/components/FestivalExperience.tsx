@@ -64,7 +64,7 @@ function normalizeEvents(events?: SanityEvent[] | null) {
   }
 
   return events
-    .filter((event) => event.title && (event.startDateTime || event.date))
+    .filter((event) => event.isVisible !== false && event.title && (event.startDateTime || event.date))
     .map((event) => {
       const modernStart = formatEventDateTime(event.startDateTime);
 

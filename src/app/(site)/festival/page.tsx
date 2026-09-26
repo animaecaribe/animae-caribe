@@ -7,7 +7,7 @@ import type {SanityEvent, SanityFestivalPage} from '@/sanity/lib/types';
 export const revalidate = 60;
 
 function isRenderableEvent(event: SanityEvent | null | undefined): event is SanityEvent {
-  return Boolean(event?.title && (event.startDateTime || event.date));
+  return Boolean(event?.isVisible !== false && event?.title && (event.startDateTime || event.date));
 }
 
 export async function generateMetadata() {
