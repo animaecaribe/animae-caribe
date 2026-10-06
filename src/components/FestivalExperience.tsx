@@ -3,7 +3,6 @@ import AboutTeaser from './AboutTeaser';
 import PartnersStrip from './PartnersStrip';
 import ServicesSection from './ServicesSection';
 import ButtonLink from './ButtonLink';
-import FestivalCalendarSection from './FestivalCalendarSection';
 import FestivalSpeakersSection from './FestivalSpeakersSection';
 import FestivalVenueSection from './FestivalVenueSection';
 import { ArrowRightIcon, MailIcon } from './Icons';
@@ -14,6 +13,8 @@ import {resolvePastEditionsHref, resolveProgrammeHref} from '../lib/festivalRout
 import {getPublicFestivalEventTitle} from '../lib/festivalContent';
 import {acf26Speakers} from '../data/acf26Speakers';
 
+const FESTIVAL_TIME_ZONE = 'America/Port_of_Spain';
+
 type FestivalExperienceProps = {
   content?: SanityFestivalPage | null;
   partners?: Partner[] | null;
@@ -23,9 +24,9 @@ type FestivalExperienceProps = {
 
 function formatEventDate(date?: string) {
   if (!date) return undefined;
-  const parsed = new Date(`${date}T00:00:00`);
+  const parsed = new Date(`${date}T00:00:00-04:00`);
   if (Number.isNaN(parsed.getTime())) return date;
-  return new Intl.DateTimeFormat('en', {month: 'short', day: 'numeric'}).format(parsed);
+  return new Intl.DateTimeFormat('en', {month: 'short', day: 'numeric', timeZone: FESTIVAL_TIME_ZONE}).format(parsed);
 }
 
 function formatEventDateTime(dateTime?: string) {
@@ -34,8 +35,8 @@ function formatEventDateTime(dateTime?: string) {
   if (Number.isNaN(parsed.getTime())) return undefined;
 
   return {
-    date: new Intl.DateTimeFormat('en', {month: 'short', day: 'numeric'}).format(parsed),
-    time: new Intl.DateTimeFormat('en', {hour: 'numeric', minute: '2-digit'}).format(parsed),
+    date: new Intl.DateTimeFormat('en', {month: 'short', day: 'numeric', timeZone: FESTIVAL_TIME_ZONE}).format(parsed),
+    time: new Intl.DateTimeFormat('en', {hour: 'numeric', minute: '2-digit', timeZone: FESTIVAL_TIME_ZONE}).format(parsed),
   };
 }
 
@@ -166,6 +167,21 @@ export default function FestivalExperience({content, partners, events, currentPr
         backgroundPosterTimeSeconds={content?.hero?.backgroundVideo?.posterTimeSeconds}
       />
 
+      <section className="section festival-cta-section" id="registration" aria-labelledby="festival-registration-heading">
+        <div className="container festival-cta-shell glass-panel">
+          <div>
+            <span className="section-kicker">Join the festival</span>
+            <h2 id="festival-registration-heading">Registrations open soon</h2>
+            <p>Get ready for Animae Caribe Festival. Check back here for registration details and explore the programme while you wait.</p>
+          </div>
+          <div className="festival-cta-actions">
+            <ButtonLink href={programmeHref} variant="primary">
+              Explore the programme <ArrowRightIcon />
+            </ButtonLink>
+          </div>
+        </div>
+      </section>
+
       <AboutTeaser
         kicker={content?.aboutSection?.eyebrow || 'About the Festival'}
         title={content?.aboutSection?.heading || 'A festival home for Caribbean animation, creative exchange and industry momentum.'}
@@ -198,8 +214,6 @@ export default function FestivalExperience({content, partners, events, currentPr
 
       <FestivalSpeakersSection content={content?.speakersSection} people={acf26Speakers} />
 
-      <FestivalCalendarSection content={content?.calendarSection} />
-
       <section className="section festival-programme-section" id="programme">
         <div className="container">
           <div className="services-header">
@@ -213,6 +227,7 @@ export default function FestivalExperience({content, partners, events, currentPr
             </p>
           </div>
 
+          <p>All event times are in Trinidad and Tobago time (AST, UTC−4).</p>
           <div className="festival-events-grid">
             {eventCards.map((event) => (
               <article className="festival-event-card glass-card" key={event.title}>

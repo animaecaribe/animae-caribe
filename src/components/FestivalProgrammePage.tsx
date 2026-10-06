@@ -4,6 +4,8 @@ import type {SanityEvent, SanityFestivalEdition} from '../sanity/lib/types';
 import {getPastEditionsRoute} from '../lib/festivalRoutes';
 import {getPublicFestivalEventTitle} from '../lib/festivalContent';
 
+const FESTIVAL_TIME_ZONE = 'America/Port_of_Spain';
+
 type ProgrammeItem = {
   dateKey: string;
   dateLabel: string;
@@ -42,13 +44,13 @@ function formatDateLabel(dateTime?: string, legacyDate?: string) {
 
     if (!Number.isNaN(parsed.getTime())) {
       return {
-        key: parsed.toISOString().slice(0, 10),
-        label: new Intl.DateTimeFormat('en', {
+        key: new Intl.DateTimeFormat('en-CA', {timeZone: FESTIVAL_TIME_ZONE, year: 'numeric', month: '2-digit', day: '2-digit'}).format(parsed),
+        label: new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,
           weekday: 'long',
           month: 'long',
           day: 'numeric',
         }).format(parsed),
-        shortLabel: new Intl.DateTimeFormat('en', {
+        shortLabel: new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,
           month: 'short',
           day: 'numeric',
         }).format(parsed),
@@ -57,17 +59,17 @@ function formatDateLabel(dateTime?: string, legacyDate?: string) {
   }
 
   if (legacyDate) {
-    const parsed = new Date(`${legacyDate}T00:00:00`);
+    const parsed = new Date(`${legacyDate}T00:00:00-04:00`);
 
     if (!Number.isNaN(parsed.getTime())) {
       return {
         key: legacyDate,
-        label: new Intl.DateTimeFormat('en', {
+        label: new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,
           weekday: 'long',
           month: 'long',
           day: 'numeric',
         }).format(parsed),
-        shortLabel: new Intl.DateTimeFormat('en', {
+        shortLabel: new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,
           month: 'short',
           day: 'numeric',
         }).format(parsed),
@@ -85,13 +87,13 @@ function formatTimeLabel(event: SanityEvent) {
   const end = event.endDateTime ? new Date(event.endDateTime) : null;
 
   if (start && !Number.isNaN(start.getTime())) {
-    const startLabel = new Intl.DateTimeFormat('en', {
+    const startLabel = new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,
       hour: 'numeric',
       minute: '2-digit',
     }).format(start);
 
     if (end && !Number.isNaN(end.getTime())) {
-      const endLabel = new Intl.DateTimeFormat('en', {
+      const endLabel = new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,
         hour: 'numeric',
         minute: '2-digit',
       }).format(end);
@@ -163,15 +165,15 @@ function formatEditionRange(edition: SanityFestivalEdition | null | undefined, y
     return `Festival ${edition?.year || year}`;
   }
 
-  const start = new Date(`${edition.startDate}T00:00:00`);
-  const end = new Date(`${edition.endDate}T00:00:00`);
+  const start = new Date(`${edition.startDate}T00:00:00-04:00`);
+  const end = new Date(`${edition.endDate}T00:00:00-04:00`);
 
   if (Number.isNaN(start.getTime()) || Number.isNaN(end.getTime())) {
     return `Festival ${edition?.year || year}`;
   }
 
-  const startLabel = new Intl.DateTimeFormat('en', {month: 'short', day: 'numeric'}).format(start);
-  const endLabel = new Intl.DateTimeFormat('en', {month: 'short', day: 'numeric', year: 'numeric'}).format(end);
+  const startLabel = new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,month: 'short', day: 'numeric'}).format(start);
+  const endLabel = new Intl.DateTimeFormat('en', {timeZone: FESTIVAL_TIME_ZONE,month: 'short', day: 'numeric', year: 'numeric'}).format(end);
 
   return `${startLabel} - ${endLabel}`;
 }
@@ -262,6 +264,7 @@ export default function FestivalProgrammePage({
 
       <section className="section festival-programme-page-section">
         <div className="container festival-programme-page-shell">
+          <p>All event times are in Trinidad and Tobago time (AST, UTC−4).</p>
           {groupedEvents.length ? (
             groupedEvents.map((group) => (
               <section className="festival-programme-day-block" key={group.dateKey}>
