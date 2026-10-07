@@ -119,13 +119,22 @@ export const acf26Speakers: SanityPerson[] = [
     sortOrder: 13,
   },
   {
+    _id: 'acf26-richard-young',
+    name: 'Richard Young',
+    role: 'Creative Industry Facilitator',
+    bio: 'Our Creative Industry Facilitator is Richard Young, an award-winning Caribbean artistic director, cultural storyteller, production designer, creative strategist and talent development practitioner. He brings decades of experience in shaping regional sustainable identity, and indigenous creative expression to the discussions.',
+    image: {url: '/assets/acf26-speaker-portraits/richard-young.jpg', alt: 'Richard Young', width: 2048, height: 1365},
+    active: true,
+    sortOrder: 14,
+  },
+  {
     _id: 'acf26-roger-hunt',
     name: 'Roger Hunt',
     role: 'AI engineer and convenor, Global Algorithmacy Conference',
     bio: 'Roger Hunt is a PhD candidate in Organisational Theory at Bentley University and an AI engineer specialising in Application Layer Communication. He leads Ludwitt Academy and convenes the Global Algorithmacy Conference.',
     image: {url: '/assets/acf26-speaker-portraits/roger-hunt.jpg', alt: 'Roger Hunt'},
     active: true,
-    sortOrder: 14,
+    sortOrder: 15,
   },
   {
     _id: 'acf26-samuel-wamba',
@@ -134,7 +143,7 @@ export const acf26Speakers: SanityPerson[] = [
     bio: 'Samuel Wamba is Professor and Associate Dean for Research at TBS Education, specialising in AI, digital transformation and sovereignty. He is an award-winning researcher in AI governance and organisational change.',
     image: {url: '/assets/acf26-speaker-portraits/samuel-wamba.jpg', alt: 'Samuel Wamba'},
     active: true,
-    sortOrder: 15,
+    sortOrder: 16,
   },
   {
     _id: 'acf26-sarah-witmer',
@@ -143,7 +152,7 @@ export const acf26Speakers: SanityPerson[] = [
     bio: 'Sarah Witmer is a digital cultures researcher, media professor and PhD candidate whose work explores digital media, algorithmic authority, online communities, journalism, identity and institutional trust.',
     image: {url: '/assets/acf26-speaker-portraits/sarah-witmer.jpg', alt: 'Sarah Witmer'},
     active: true,
-    sortOrder: 16,
+    sortOrder: 17,
   },
   {
     _id: 'acf26-saundra-mcclain',
@@ -152,7 +161,7 @@ export const acf26Speakers: SanityPerson[] = [
     bio: 'Saundra McClain is an award-winning director, writer, producer, actor and educator with more than 50 years across theatre, film, television and animation. She is recognised for her performances, directing, education and storytelling.',
     image: {url: '/assets/acf26-speaker-portraits/saundra-mcclain.jpg', alt: 'Saundra McClain'},
     active: true,
-    sortOrder: 17,
+    sortOrder: 18,
   },
   {
     _id: 'acf26-shaun-riaz-mohammed',
@@ -161,6 +170,6 @@ export const acf26Speakers: SanityPerson[] = [
     bio: 'Shaun Riaz Mohammed is a Trinidad and Tobago comic book artist and illustrator, published since 2004. His creator-owned horror-fantasy title Red was acquired by U.S. publisher Cosmic Lion Productions and debuted at Comic-Con International in 2024.',
     image: {url: '/assets/acf26-speaker-portraits/shaun-riaz-mohammed.jpg', alt: 'Shaun Riaz Mohammed'},
     active: true,
-    sortOrder: 18,
+    sortOrder: 19,
   },
 ];
