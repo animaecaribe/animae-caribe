@@ -11,6 +11,8 @@ export function normalizeSanityPartners(partners?: SanityPartner[] | null): Part
     .map((partner) => ({
       name: partner.name as string,
       src: partner.logoUrl as string,
+      beltRow: partner.beltRow,
+      sortOrder: partner.sortOrder,
     }));
 }
 
@@ -41,21 +43,28 @@ export function splitPartnersIntoBalancedRows(items: Partner[]): Partner[][] {
     return [];
   }
 
-  const baseSize = Math.floor(items.length / rowCount);
-  const remainder = items.length % rowCount;
-  const rows: Partner[][] = [];
-  let startIndex = 0;
+  // Stable sorting also respects manually selected partner lists when no order is set.
+  const ordered = [...items].sort((a, b) => (a.sortOrder ?? 999999) - (b.sortOrder ?? 999999));
+  const pinned = ordered.filter((item) => item.beltRow === 'first');
+  const automatic = ordered.filter((item) => item.beltRow !== 'first');
+  const rows: Partner[][] = Array.from({length: rowCount}, () => []);
+  rows[0] = pinned;
 
-  for (let rowIndex = 0; rowIndex < rowCount; rowIndex += 1) {
-    const size = baseSize + (rowIndex < remainder ? 1 : 0);
-    const rowItems = items.slice(startIndex, startIndex + size);
-
-    if (rowItems.length) {
-      rows.push(rowItems);
-    }
-
-    startIndex += size;
+  // Water-fill the row capacities around the fixed first-row minimum. If that
+  // row is already oversized, only the remaining rows receive automatic logos.
+  const sizes = rows.map((row) => row.length);
+  for (let index = 0; index < automatic.length; index += 1) {
+    const smallest = Math.min(...sizes);
+    sizes[sizes.indexOf(smallest)] += 1;
   }
 
-  return rows;
+  let startIndex = 0;
+  for (let rowIndex = 0; rowIndex < rowCount; rowIndex += 1) {
+    const count = sizes[rowIndex] - rows[rowIndex].length;
+    rows[rowIndex].push(...automatic.slice(startIndex, startIndex + count));
+    rows[rowIndex].sort((a, b) => (a.sortOrder ?? 999999) - (b.sortOrder ?? 999999));
+    startIndex += count;
+  }
+
+  return rows.filter((row) => row.length);
 }

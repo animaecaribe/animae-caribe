@@ -11,6 +11,31 @@ This project uses the existing `partner` document type for ecosystem-wide partne
 - leaving `relatedExperiences` empty makes a partner ecosystem-wide
 - frontend partner queries only return documents where `active !== false`
 
+## Sponsor positioning
+
+In a Partner / collaborator document:
+
+- Set **Relationship** to **Sponsor** and record the **Sponsor year**.
+- Set **Logo belt row** to **First row** to keep that logo on the top belt everywhere it appears. **Automatic** restores normal distribution.
+- **Belt position / sort order** controls order within a belt (lower numbers first). It does not by itself force a particular row.
+- The number of belts still depends on the total number of logos: one for a single logo, two up to 20, three up to 36, and four above 36. Empty rows are omitted.
+- Automatic logos fill the shortest rows around the pinned first-row minimum. An oversized first row stays intact while the other rows share the remaining logos evenly.
+- Sponsor year is an editorial label; review placement and active status when the sponsorship changes.
+
+### 2026 sponsor import
+
+The supplied 15 JPEGs are saved with descriptive names in `public/assets/sponsors/2026/` and uploaded to Sanity. IMAX, UTT, Pavilion+ and European Union reuse existing records. The EU / European Film Festival artwork is one supplied logo. The Ministry of Trade, Investment and Tourism is separate from the existing Ministry of Planning and Development logo.
+
+Preview the duplicate checks and proposed changes:
+
+```bash
+node scripts/sanity/import2026Sponsors.mjs --logos-dir "C:\path\to\logos"
+```
+
+Add `--apply` to upload, update records and rename the source files. This requires `SANITY_API_WRITE_TOKEN`. Before applying, the script saves existing partner documents under the ignored `.cache/sponsor-import/` directory. Existing partner IDs, names, URLs and unrelated metadata are preserved; sponsor visibility is made ecosystem-wide. Repeating the import matches the same records and accepts already-renamed files.
+
+Run row-balancing checks with `node --test scripts/sanity/partners.test.mjs`.
+
 ## Import logos from `logo_exports_v2_webp.zip`
 
 1. Extract the zip to a local folder.

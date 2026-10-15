@@ -64,27 +64,27 @@ export const festivalHighlights = [
 
 export const festivalEvents = [
   {
-    date: 'Oct 24',
-    time: '7:00 PM',
-    title: 'Opening Night: Caribbean Animation Showcase',
-    description: 'A celebratory first look at new shorts, festival selections and invited artist work.',
-    location: 'Festival Main Theatre',
-    category: 'Screening',
+    "date": "2026-10-28",
+    "time": "9:00 AM - 10:30 AM",
+    "title": "AC26 Official Press Launch & Case Study: Champions of the Galaxy",
+    "description": "An inside look at developing the Caribbean IP Champions of the Galaxy for the global market, exploring storytelling, investment, production and how Indigenous voices can thrive in an AI-driven creative landscape. Featuring representatives from Murphy Clarke Financial, Xentrix Studios, Animae Caribe and the Dwayne Bravo Foundation. With Wendy Fitzwilliam.",
+    "location": "CinemaONE IMAX, One Woodbrook Place, Port of Spain",
+    "category": "Panel"
   },
   {
-    date: 'Oct 25',
-    time: '10:30 AM',
-    title: 'Story Lab for Animated Worlds',
-    description: 'A practical workshop on characters, world-building and story structure for animation.',
-    location: 'Creative Lab Studio',
-    category: 'Workshop',
+    "date": "2026-10-28",
+    "time": "10:40 AM - 12:00 PM",
+    "title": "Algorithmacy: Reimagining How We Think",
+    "description": "Academics and creatives examine how AI shapes decisions, learning, interaction, responsibility, power and the future of creative and intellectual practice. Featuring guests from Harvard Business School, UWI, LSE, Bentley University and Italy's National Research Council, alongside industry and social-impact leaders. With Suzanne Burke and Richard Young.",
+    "location": "CinemaONE IMAX, One Woodbrook Place, Port of Spain",
+    "category": "Panel"
   },
   {
-    date: 'Oct 26',
-    time: '2:00 PM',
-    title: 'Building a Caribbean Animation Industry',
-    description: 'A panel on training, distribution, co-production and sustainable creative infrastructure.',
-    location: 'Industry Forum Room',
-    category: 'Panel',
-  },
+    "date": "2026-10-28",
+    "time": "12:30 PM - 3:00 PM",
+    "title": "Learning to Comply",
+    "description": "Academics, researchers, industry professionals and thought leaders explore how algorithms shape learning, environmental justice, culture, meaning, belief and belonging, and what becomes visible when algorithmic systems are understood as cultural actors rather than neutral tools. With Suzanne Burke and Richard Young.",
+    "location": "CinemaONE IMAX, One Woodbrook Place, Port of Spain",
+    "category": "Panel"
+  }
 ];

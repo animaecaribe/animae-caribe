@@ -85,6 +85,7 @@ export type SanityVisibilityFields = {
 };
 
 export type SanityPartner = {
+  beltRow?: 'auto' | 'first';
   name?: string;
   url?: string;
   website?: string;

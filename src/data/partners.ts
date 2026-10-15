@@ -1,6 +1,8 @@
 export type Partner = {
   name: string;
   src: string;
+  beltRow?: 'auto' | 'first';
+  sortOrder?: number;
 };
 
 export const partners: Partner[] = [

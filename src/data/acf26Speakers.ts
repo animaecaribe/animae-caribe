@@ -172,4 +172,52 @@ export const acf26Speakers: SanityPerson[] = [
     active: true,
     sortOrder: 19,
   },
+  {
+      "_id": "acf26-anuskha-sonai",
+      "name": "Anuskha Sonai",
+      "role": "Founder and President, Creative Tech Hub Caribbean",
+      "bio": "Anuskha Sonai, Founder and President of Creative Tech Hub Caribbean, advances Caribbean animation through professional training, production development, regional partnerships, and global opportunities for emerging talent.",
+      "image": {
+          "url": "/assets/acf26-speaker-portraits/anuskha-sonai.jpg",
+          "alt": "Anuskha Sonai"
+      },
+      "active": true,
+      "sortOrder": 20
+  },
+  {
+      "_id": "acf26-florian-perinelle",
+      "name": "Florian Perinelle",
+      "role": "Lead Animator, Wildwood / LAIKA",
+      "bio": "Florian Perinelle is a French stop-motion animator with over 20 years' experience, including 14 years at LAIKA. As Lead Animator on Wildwood, he specialises in character performance, storytelling, mentoring, and advancing the craft of stop-motion animation.",
+      "image": {
+          "url": "/assets/acf26-speaker-portraits/florian-perinelle.jpg",
+          "alt": "Florian Perinelle"
+      },
+      "active": true,
+      "sortOrder": 21
+  },
+  {
+      "_id": "acf26-kiwan-landreth-smith",
+      "name": "Kiwan Landreth-Smith",
+      "role": "Composer, guitarist, producer and creative strategist",
+      "bio": "Kiwan Landreth-Smith is a composer, guitarist, producer, and creative strategist exploring the evolving landscape of art, human creativity and the future of artistic expression, through the lenses of both technologist and artist.",
+      "image": {
+          "url": "/assets/acf26-speaker-portraits/kiwan-landreth-smith.jpg",
+          "alt": "Kiwan Landreth-Smith"
+      },
+      "active": true,
+      "sortOrder": 22
+  },
+  {
+      "_id": "acf26-kylie-jacob",
+      "name": "Kylie Jacob",
+      "role": "Director and producer",
+      "bio": "Kylie Jacob is a director and producer with experience spanning international television, film, advertising and brand development. She served as Senior Producer on Carnival Catwalk Season One, reaching global audiences through NBCUniversal's Peacock, American Airlines and Caribbean Airlines.",
+      "image": {
+          "url": "/assets/acf26-speaker-portraits/kylie-jacob.jpg",
+          "alt": "Kylie Jacob"
+      },
+      "active": true,
+      "sortOrder": 23
+  },
 ];

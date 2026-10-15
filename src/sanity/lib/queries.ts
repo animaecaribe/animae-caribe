@@ -223,6 +223,7 @@ const aboutJobListingProjection = `
 `;
 
 const partnerProjection = `
+  beltRow,
   name,
   "url": coalesce(url, website),
   website,

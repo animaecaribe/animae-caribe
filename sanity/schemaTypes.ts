@@ -1886,7 +1886,7 @@ const partner = defineType({
       title: 'Relationship',
       type: 'string',
       options: {list: partnerTypeOptions},
-      description: 'Optional classification only. This can be left blank for now.',
+      description: 'Classify sponsors separately from other partners, venues and collaborators.',
     }),
     defineField({
       name: 'partnerTypes',
@@ -1922,7 +1922,22 @@ const partner = defineType({
     }),
     defineField({name: 'website', title: 'Legacy website', type: 'url', hidden: true}),
     defineField({name: 'description', title: 'Description', type: 'text', rows: 3}),
-    defineField({name: 'sortOrder', title: 'Sort order', type: 'number'}),
+    defineField({
+      name: 'beltRow', title: 'Logo belt row', type: 'string', initialValue: 'auto',
+      options: {list: [{title: 'Automatic (balanced rows)', value: 'auto'}, {title: 'First row', value: 'first'}], layout: 'radio'},
+      description: 'First row keeps this logo on the top belt wherever this partner appears. Remaining logos balance automatically around pinned logos.',
+    }),
+    defineField({
+      name: 'sortOrder', title: 'Belt position / sort order', type: 'number',
+      validation: (Rule) => Rule.integer().min(0),
+      description: 'Lower numbers appear earlier within a row. Unset positions follow numbered logos. Use with First row to control sponsor placement.',
+    }),
+    defineField({
+      name: 'sponsorYear', title: 'Sponsor year', type: 'number',
+      validation: (Rule) => Rule.integer().min(2000).max(2100),
+      description: 'Editorial reference only; does not automatically hide or unpin the logo next year.',
+      hidden: ({document}) => document?.relationship !== 'sponsor',
+    }),
     defineField({name: 'isFeatured', title: 'Featured', type: 'boolean', initialValue: false}),
   ],
   initialValue: {

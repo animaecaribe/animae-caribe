@@ -61,7 +61,7 @@ function formatEventTimeRange(startDateTime?: string, endDateTime?: string, lega
 
 function normalizeEvents(events?: SanityEvent[] | null) {
   if (!events?.length) {
-    return festivalEvents;
+    return festivalEvents.map((event) => ({...event, date: formatEventDate(event.date) || event.date}));
   }
 
   return events
@@ -212,7 +212,10 @@ export default function FestivalExperience({content, partners, events, currentPr
         items={highlightCards}
       />
 
-      <FestivalSpeakersSection content={content?.speakersSection} people={acf26Speakers} />
+      <FestivalSpeakersSection
+        content={content?.speakersSection}
+        people={content?.speakersSection?.people ?? acf26Speakers}
+      />
 
       <section className="section festival-programme-section" id="programme">
         <div className="container">

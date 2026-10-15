@@ -2,7 +2,7 @@ import ButtonLink from './ButtonLink';
 import {ArrowRightIcon, ExternalIcon} from './Icons';
 import type {SanityEvent, SanityFestivalEdition} from '../sanity/lib/types';
 import {getPastEditionsRoute} from '../lib/festivalRoutes';
-import {getPublicFestivalEventTitle} from '../lib/festivalContent';
+import {getFestivalAttendanceLabel, getPublicFestivalEventTitle} from '../lib/festivalContent';
 
 const FESTIVAL_TIME_ZONE = 'America/Port_of_Spain';
 
@@ -131,7 +131,7 @@ function normalizeProgrammeItems(events?: SanityEvent[] | null): ProgrammeItem[]
         description: event.shortDescription || '',
         venue: event.venue || 'Venue to be announced',
         category: event.eventType || 'Festival event',
-        attendanceLabel: event.attendanceType,
+        attendanceLabel: getFestivalAttendanceLabel(event.attendanceType),
         priceLabel: event.priceLabel,
         actionHref,
         actionLabel: actionHref ? event.buttonLabel || (event.ticketUrl ? 'Get tickets' : 'Register now') : undefined,
