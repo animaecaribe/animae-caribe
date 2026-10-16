@@ -13,6 +13,8 @@ This project uses the existing `partner` document type for ecosystem-wide partne
 
 ## Sponsor positioning
 
+The current first-row membership and order follow the 16 October programme graphic; see [the current sponsor sequence](programme-graphic-2026-10-16.md). The initial 2026 import below records the earlier set of supplied files.
+
 In a Partner / collaborator document:
 
 - Set **Relationship** to **Sponsor** and record the **Sponsor year**.

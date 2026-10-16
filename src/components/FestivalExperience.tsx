@@ -4,6 +4,7 @@ import PartnersStrip from './PartnersStrip';
 import ServicesSection from './ServicesSection';
 import ButtonLink from './ButtonLink';
 import FestivalSpeakersSection from './FestivalSpeakersSection';
+import FestivalCalendarSection from './FestivalCalendarSection';
 import FestivalVenueSection from './FestivalVenueSection';
 import { ArrowRightIcon, MailIcon } from './Icons';
 import { festivalEvents, festivalHighlights, festivalPartners } from '../data/festival';
@@ -216,6 +217,8 @@ export default function FestivalExperience({content, partners, events, currentPr
         content={content?.speakersSection}
         people={content?.speakersSection?.people ?? acf26Speakers}
       />
+
+      <FestivalCalendarSection content={content?.calendarSection} />
 
       <section className="section festival-programme-section" id="programme">
         <div className="container">

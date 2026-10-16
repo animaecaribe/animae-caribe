@@ -1,5 +1,7 @@
 # Festival programme audit - 15 October 2026
 
+This is the historical spreadsheet/flyer audit. The supplied 16 October graphic supersedes its public event grouping; see [the latest reconciliation](programme-graphic-2026-10-16.md).
+
 **Sources:** Final flyer `OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf` (page 1), plus `AC26 Schedule for Website.xlsx`, sheet `Algorithmacy Speakers - Confirm`, rows 2-29. Source workbook unchanged. Wednesday-Friday map to 28-30 October 2026 using the existing festival edition. All times are Trinidad and Tobago time (AST, UTC-4).
 
 ## Applied changes

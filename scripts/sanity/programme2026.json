@@ -1,6 +1,6 @@
 {
-  "source": "AC26 Schedule for Website.xlsx",
-  "sheet": "Algorithmacy Speakers - Confirm",
+  "source": "2026-festival-programme.jpeg",
+  "sheet": "",
   "editionYear": 2026,
   "events": [
     {
@@ -16,7 +16,8 @@
       "eventType": "panel",
       "attendanceType": "registrationRequired",
       "priceLabel": "Free",
-      "description": "An inside look at developing the Caribbean IP Champions of the Galaxy for the global market, exploring storytelling, investment, production and how Indigenous voices can thrive in an AI-driven creative landscape. Featuring representatives from Murphy Clarke Financial, Xentrix Studios, Animae Caribe and the Dwayne Bravo Foundation. With Wendy Fitzwilliam."
+      "description": "An inside look at developing the Caribbean IP Champions of the Galaxy for the global market, exploring storytelling, investment, production and how Indigenous voices can thrive in an AI-driven creative landscape. Featuring representatives from Murphy Clarke Financial, Xentrix Studios, Animae Caribe and the Dwayne Bravo Foundation. With Wendy Fitzwilliam.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-academic-keynotes-emerging-systems",
@@ -25,26 +26,13 @@
       ],
       "day": "2026-10-28",
       "start": "10:40",
-      "end": "12:00",
+      "end": "15:00",
       "title": "Algorithmacy: Reimagining How We Think",
       "eventType": "panel",
       "attendanceType": "registrationRequired",
       "priceLabel": "Free",
-      "description": "Academics and creatives examine how AI shapes decisions, learning, interaction, responsibility, power and the future of creative and intellectual practice. Featuring guests from Harvard Business School, UWI, LSE, Bentley University and Italy's National Research Council, alongside industry and social-impact leaders. With Suzanne Burke and Richard Young."
-    },
-    {
-      "id": "acf26-event-afternoon-academic-presentations",
-      "rows": [
-        7
-      ],
-      "day": "2026-10-28",
-      "start": "12:30",
-      "end": "15:00",
-      "title": "Learning to Comply",
-      "eventType": "panel",
-      "attendanceType": "registrationRequired",
-      "priceLabel": "Free",
-      "description": "Academics, researchers, industry professionals and thought leaders explore how algorithms shape learning, environmental justice, culture, meaning, belief and belonging, and what becomes visible when algorithmic systems are understood as cultural actors rather than neutral tools. With Suzanne Burke and Richard Young."
+      "description": "Academics and creatives examine how AI shapes decisions, learning, interaction, responsibility, power and the future of creative and intellectual practice. Featuring guests from Harvard Business School, UWI, LSE, Bentley University and Italy's National Research Council, alongside industry and social-impact leaders. With Suzanne Burke and Richard Young. Academics, researchers, industry professionals and thought leaders explore how algorithms shape learning, environmental justice, culture, meaning, belief and belonging, and what becomes visible when algorithmic systems are understood as cultural actors rather than neutral tools. With Suzanne Burke and Richard Young.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-premiere-lykas-wildwood",
@@ -58,7 +46,8 @@
       "eventType": "screening",
       "attendanceType": "paid",
       "priceLabel": "IMAX tickets",
-      "description": "The Caribbean premiere of LAIKA's Wildwood opens Animae Caribe Festival 2026, with a Q&A featuring Lead Stop-Motion Animator Florian Perinelle. Followed by a jam session and afterparty at Samurai. With Roxanne Colthrust."
+      "description": "The Caribbean premiere of LAIKA's Wildwood opens Animae Caribe Festival 2026, with a Q&A featuring Lead Stop-Motion Animator Florian Perinelle. Followed by a jam session and afterparty at Samurai. With Roxanne Colthrust.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-algorithmacy-morning-presentations",
@@ -68,28 +57,14 @@
       ],
       "day": "2026-10-29",
       "start": "09:00",
-      "end": "12:00",
+      "end": "15:00",
       "title": "Business of Digital Future: AI, Efficiency & the Cost of Coordination",
       "eventType": "panel",
       "attendanceType": "registrationRequired",
       "priceLabel": "Free",
-      "description": "Healthcare, business, academic and technology professionals explore AI adoption in highly regulated industries, human-centred implementation, workflow coordination, efficiency and the organisational costs of integrating AI into professional practice. With Suzanne Burke and Richard Young."
-    },
-    {
-      "id": "acf26-event-samuel-wamba-presentation",
-      "rows": [
-        13
-      ],
-      "day": "2026-10-29",
-      "start": "12:30",
-      "end": "15:00",
-      "title": "Digital Sovereignty",
-      "eventType": "panel",
-      "venue": "CinemaONE IMAX - Emerald",
-      "requiresConfirmation": [
-        "venue"
-      ],
-      "description": "Samuel Fosso Wamba facilitates a panel of experts examining pathways toward digital sovereignty, resilience, security and greater control over our technological future."
+      "description": "Healthcare, business, academic and technology professionals explore AI adoption in highly regulated industries, human-centred implementation, workflow coordination, efficiency and the organisational costs of integrating AI into professional practice. With Suzanne Burke and Richard Young. Samuel Fosso Wamba facilitates a panel of experts examining pathways toward digital sovereignty, resilience, security and greater control over our technological future.",
+      "venue": "CinemaONE IMAX & Emerald Cinema",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-investment-panel",
@@ -101,7 +76,8 @@
       "end": "13:30",
       "title": "Who Will Fund the Future of Creativity?",
       "eventType": "panel",
-      "description": "As exponential technologies transform how culture is created, distributed and consumed, government, private-sector and development leaders engage creatives on investment and opportunity. Featuring GlobalTT, Founder Institute, the Inter-American Development Bank, Good Swimma Entertainment and the Private Sector Organisation of Trinidad and Tobago. With Keron Niles."
+      "description": "As exponential technologies transform how culture is created, distributed and consumed, government, private-sector and development leaders engage creatives on investment and opportunity. Featuring GlobalTT, Founder Institute, the Inter-American Development Bank, Good Swimma Entertainment and the Private Sector Organisation of Trinidad and Tobago. Keron Niles, manager of Freetown Collective, leads the discussion.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-disney-legacy-bruce-smith",
@@ -113,7 +89,8 @@
       "end": "14:35",
       "title": "Bruce Smith: The Disney Legacy",
       "eventType": "talk",
-      "description": "From The Proud Family to its bold new generation, join creator and executive producer Bruce W. Smith for a candid conversation about his creative journey, inclusion, representation and what comes next for animation, culture and storytelling. Includes audience Q&A."
+      "description": "From The Proud Family to its bold new generation, join creator and executive producer Bruce W. Smith for a candid conversation about his creative journey, inclusion, representation and what comes next for animation, culture and storytelling. Includes audience Q&A.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "2df7942b-48dc-4ab8-adc9-89509d240931",
@@ -128,7 +105,8 @@
       "attendanceType": "paid",
       "priceLabel": "IMAX tickets",
       "description": "A special screening of Sony Pictures Animation's GOAT with director Tyree Dillihay. Go behind the scenes, see the film on the big screen and join a live Q&A exploring its making and the future of animated storytelling.",
-      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1"
+      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-nuku-documentary-workshop",
@@ -141,7 +119,8 @@
       "title": "Stop Motion: Handmade & Alive",
       "eventType": "screening",
       "description": "A documentary and discussion with Andres Maand of NUKU Film, including a screening of The Wings, a 13-minute short from Estonia.",
-      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1"
+      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "b42e1194-b2c6-4287-a751-e62f24830ca5",
@@ -151,25 +130,12 @@
       ],
       "day": "2026-10-30",
       "start": "10:00",
-      "end": "11:00",
-      "title": "Stop Motion World: The Future - Masterclass with Chris Lavis",
-      "eventType": "workshop",
-      "description": "A special screening and behind-the-scenes masterclass with Chris Lavis, director of the 2026 Oscar winner The Girl Who Cried Pearls. Explore stop-motion craft, character performance and the real-eye technique used in his 2007 short Madame Tutli-Putli.",
-      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1"
-    },
-    {
-      "id": "acf26-event-stop-motion-world-and-future",
-      "rows": [
-        19,
-        20
-      ],
-      "day": "2026-10-30",
-      "start": "11:00",
       "end": "12:00",
-      "title": "Stop Motion World: The Future - Panel",
-      "eventType": "panel",
-      "description": "Can stop motion thrive in an age of AI? Chris Lavis, Florian Perinelle of LAIKA and Disney's Bruce W. Smith explore the enduring magic, evolving techniques and future of this handcrafted art form. Moderated by Andres Maand.",
-      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1"
+      "title": "Stop Motion World: The Future",
+      "eventType": "workshop",
+      "description": "A special screening and behind-the-scenes masterclass with Chris Lavis, director of the 2026 Oscar winner The Girl Who Cried Pearls. Explore stop-motion craft, character performance and the real-eye technique used in his 2007 short Madame Tutli-Putli. Can stop motion thrive in an age of AI? Chris Lavis, Florian Perinelle of LAIKA and Disney's Bruce W. Smith explore the enduring magic, evolving techniques and future of this handcrafted art form. Moderated by Andres Maand.",
+      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-making-wildwood-behind-the-magic",
@@ -182,7 +148,8 @@
       "title": "Making Wildwood Magic",
       "eventType": "talk",
       "description": "Florian Perinelle, Lead Stop-Motion Animator at LAIKA, offers a behind-the-scenes look at Wildwood's handcrafted artistry, character performance and extraordinary production process. Includes audience Q&A.",
-      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1"
+      "sourcePdf": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-ai-and-entertainment-panel",
@@ -194,7 +161,8 @@
       "end": "14:30",
       "title": "AI, Entertainment & Indigenous Stories: Who Owns the Future?",
       "eventType": "panel",
-      "description": "Caribbean and diaspora creatives discuss AI's effects on entertainment, indigenous stories, cultures and ownership. Featuring Shaun Riaz Mohammed, Oliver Milne, Chevonnese Chevers Whyte, Eric T. Elder, Kylie Jacob of Cinch Media Lab and Kiwan Landreth-Smith. With Jessica Yawching."
+      "description": "Caribbean and diaspora creatives discuss AI's effects on entertainment, indigenous stories, cultures and ownership. Featuring Shaun Riaz Mohammed, Oliver Milne, Chevonnese Chevers Whyte, Eric T. Elder, Kylie Jacob of Cinch Media Lab and Kiwan Landreth-Smith. With Jessica Yawching.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-futurett",
@@ -214,20 +182,6 @@
       "description": "Explore the pathway from AI training to industry projects, immersive learning, employment and entrepreneurship."
     },
     {
-      "id": "acf26-event-hackathon",
-      "rows": [
-        24,
-        26
-      ],
-      "day": "2026-10-30",
-      "start": "13:00",
-      "end": "15:00",
-      "title": "Hack-a-thon",
-      "eventType": "workshop",
-      "venue": "CinemaONE IMAX - Emerald",
-      "description": "A two-hour collaborative build: create in public, push pull requests and get your contributions reviewed and merged."
-    },
-    {
       "id": "acf26-event-screening-living-large",
       "rows": [
         27,
@@ -237,7 +191,8 @@
       "start": "18:00",
       "title": "Living Large: EU Special Screening",
       "eventType": "screening",
-      "description": "A special screening under the patronage of the European Union. Directed by Kristina Dufková (Czech Republic, Slovakia and France), this warm, funny stop-motion coming-of-age story follows Ben as he navigates bullying, body image, friendship and first love, discovering that confidence is about much more than appearance."
+      "description": "A special screening under the patronage of the European Union. Directed by Kristina Dufková (Czech Republic, Slovakia and France), this warm, funny stop-motion coming-of-age story follows Ben as he navigates bullying, body image, friendship and first love, discovering that confidence is about much more than appearance.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-25-years-pan-yard-party",
@@ -253,7 +208,8 @@
       "attendanceType": "paid",
       "priceLabel": "$50 online / $100 at the door",
       "description": "Celebrate 25 years of Animae Caribe Festival with a vibrant closing night at the iconic Phase II Pan Groove panyard, featuring live music, steelpan, DJs, artisan pop-ups, food, drinks and Caribbean energy. Admission: $50 online or $100 at the door.",
-      "confirmation": "User confirmed Saturday 31 October 2026 in chat."
+      "confirmation": "User confirmed Saturday 31 October 2026 in chat.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     },
     {
       "id": "acf26-event-school-digital-expo-and-cursor-event",
@@ -264,11 +220,14 @@
       "end": "15:00",
       "title": "Digital Arts & Media Summit",
       "eventType": "showcase",
-      "description": "Explore masterclasses and interactive displays at the Animae Caribe Digital Art & Media Expo. Open to schools and the public. The summit runs alongside the scheduled IMAX talks, screenings and stop-motion sessions."
+      "description": "Explore masterclasses and interactive displays at the Animae Caribe Digital Art & Media Expo. Open to schools and the public. The summit runs alongside the scheduled IMAX talks, screenings and stop-motion sessions.",
+      "sourceGraphic": "2026-festival-programme.jpeg"
     }
   ],
-  "additionalSource": "OFFICIAL FINAL VERSION - IMAX AC26 SCHEDULE V1.pdf, page 1",
+  "additionalSource": "2026-festival-programme.jpeg, supplied 16 October 2026",
   "startDate": "2026-10-28",
   "endDate": "2026-10-31",
-  "description": "The main festival programme runs 28-30 October at CinemaONE IMAX and Emerald Cinema, with screenings, panels, masterclasses and digital arts and media experiences. Celebrate 25 years of Animae Caribe at the closing panyard party on Saturday 31 October at Phase II Pan Groove panyard."
+  "description": "The main festival programme runs 28-30 October at CinemaONE IMAX and Emerald Cinema, with screenings, panels, masterclasses and digital arts and media experiences. Celebrate 25 years of Animae Caribe at the closing panyard party on Saturday 31 October at Phase II Pan Groove panyard.",
+  "previousSource": "AC26 Schedule for Website.xlsx",
+  "alignmentNote": "Latest programme graphic is authoritative for visible event blocks; earlier detailed descriptions are retained inside combined sessions."
 }

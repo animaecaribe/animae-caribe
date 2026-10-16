@@ -73,18 +73,18 @@ export const festivalEvents = [
   },
   {
     "date": "2026-10-28",
-    "time": "10:40 AM - 12:00 PM",
+    "time": "10:40 AM - 3:00 PM",
     "title": "Algorithmacy: Reimagining How We Think",
-    "description": "Academics and creatives examine how AI shapes decisions, learning, interaction, responsibility, power and the future of creative and intellectual practice. Featuring guests from Harvard Business School, UWI, LSE, Bentley University and Italy's National Research Council, alongside industry and social-impact leaders. With Suzanne Burke and Richard Young.",
+    "description": "Academics and creatives examine how AI shapes decisions, learning, interaction, responsibility, power and the future of creative and intellectual practice. Featuring guests from Harvard Business School, UWI, LSE, Bentley University and Italy's National Research Council, alongside industry and social-impact leaders. With Suzanne Burke and Richard Young. Academics, researchers, industry professionals and thought leaders explore how algorithms shape learning, environmental justice, culture, meaning, belief and belonging, and what becomes visible when algorithmic systems are understood as cultural actors rather than neutral tools. With Suzanne Burke and Richard Young.",
     "location": "CinemaONE IMAX, One Woodbrook Place, Port of Spain",
     "category": "Panel"
   },
   {
     "date": "2026-10-28",
-    "time": "12:30 PM - 3:00 PM",
-    "title": "Learning to Comply",
-    "description": "Academics, researchers, industry professionals and thought leaders explore how algorithms shape learning, environmental justice, culture, meaning, belief and belonging, and what becomes visible when algorithmic systems are understood as cultural actors rather than neutral tools. With Suzanne Burke and Richard Young.",
+    "time": "6:00 PM",
+    "title": "Wildwood Caribbean Premiere: Official Opening Screening",
+    "description": "The Caribbean premiere of LAIKA's Wildwood opens Animae Caribe Festival 2026, with a Q&A featuring Lead Stop-Motion Animator Florian Perinelle. Followed by a jam session and afterparty at Samurai. With Roxanne Colthrust.",
     "location": "CinemaONE IMAX, One Woodbrook Place, Port of Spain",
-    "category": "Panel"
+    "category": "Screening"
   }
 ];
