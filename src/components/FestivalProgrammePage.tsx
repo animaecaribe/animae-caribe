@@ -132,7 +132,7 @@ function normalizeProgrammeItems(events?: SanityEvent[] | null): ProgrammeItem[]
         venue: event.venue || 'Venue to be announced',
         category: event.eventType || 'Festival event',
         attendanceLabel: getFestivalAttendanceLabel(event.attendanceType),
-        priceLabel: event.priceLabel,
+        priceLabel: event.priceLabel?.trim().toLowerCase() === 'free' ? undefined : event.priceLabel,
         actionHref,
         actionLabel: actionHref ? event.buttonLabel || (event.ticketUrl ? 'Get tickets' : 'Register now') : undefined,
       };

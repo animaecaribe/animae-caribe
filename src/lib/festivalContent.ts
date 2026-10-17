@@ -3,8 +3,9 @@ export function getPublicFestivalEventTitle(title?: string | null) {
 }
 
 export function getFestivalAttendanceLabel(attendanceType?: string) {
+  if (attendanceType?.trim().toLowerCase() === 'free') return undefined;
+
   const labels: Record<string, string> = {
-    free: 'Free',
     paid: 'Paid',
     donation: 'Donation',
     registrationRequired: 'Registration required',

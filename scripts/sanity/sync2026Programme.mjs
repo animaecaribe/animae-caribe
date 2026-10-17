@@ -37,6 +37,8 @@ for (const entry of programme.events) {
     eventType: entry.eventType, shortDescription: entry.description,
     ...(entry.attendanceType ? {attendanceType: entry.attendanceType} : {}),
     ...(entry.priceLabel ? {priceLabel: entry.priceLabel} : {}),
+    ...(entry.ticketUrl ? {ticketUrl: entry.ticketUrl} : {}),
+    ...(entry.buttonLabel ? {buttonLabel: entry.buttonLabel} : {}),
     isVisible: true,
   })
 }

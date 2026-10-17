@@ -15,7 +15,6 @@
       "title": "AC26 Official Press Launch & Case Study: Champions of the Galaxy",
       "eventType": "panel",
       "attendanceType": "registrationRequired",
-      "priceLabel": "Free",
       "description": "An inside look at developing the Caribbean IP Champions of the Galaxy for the global market, exploring storytelling, investment, production and how Indigenous voices can thrive in an AI-driven creative landscape. Featuring representatives from Murphy Clarke Financial, Xentrix Studios, Animae Caribe and the Dwayne Bravo Foundation. With Wendy Fitzwilliam.",
       "sourceGraphic": "2026-festival-programme.jpeg"
     },
@@ -29,8 +28,9 @@
       "end": "15:00",
       "title": "Algorithmacy: Reimagining How We Think",
       "eventType": "panel",
-      "attendanceType": "registrationRequired",
-      "priceLabel": "Free",
+      "attendanceType": "paid",
+      "ticketUrl": "https://form.jotform.com/262743277701055",
+      "buttonLabel": "Purchase ticket here",
       "description": "Academics and creatives examine how AI shapes decisions, learning, interaction, responsibility, power and the future of creative and intellectual practice. Featuring guests from Harvard Business School, UWI, LSE, Bentley University and Italy's National Research Council, alongside industry and social-impact leaders. With Suzanne Burke and Richard Young. Academics, researchers, industry professionals and thought leaders explore how algorithms shape learning, environmental justice, culture, meaning, belief and belonging, and what becomes visible when algorithmic systems are understood as cultural actors rather than neutral tools. With Suzanne Burke and Richard Young.",
       "sourceGraphic": "2026-festival-programme.jpeg"
     },
@@ -61,7 +61,6 @@
       "title": "Business of Digital Future: AI, Efficiency & the Cost of Coordination",
       "eventType": "panel",
       "attendanceType": "registrationRequired",
-      "priceLabel": "Free",
       "description": "Healthcare, business, academic and technology professionals explore AI adoption in highly regulated industries, human-centred implementation, workflow coordination, efficiency and the organisational costs of integrating AI into professional practice. With Suzanne Burke and Richard Young. Samuel Fosso Wamba facilitates a panel of experts examining pathways toward digital sovereignty, resilience, security and greater control over our technological future.",
       "venue": "CinemaONE IMAX & Emerald Cinema",
       "sourceGraphic": "2026-festival-programme.jpeg"

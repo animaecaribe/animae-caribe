@@ -76,7 +76,7 @@ function normalizeEvents(events?: SanityEvent[] | null) {
       title: getPublicFestivalEventTitle(event.title),
       description: event.shortDescription || '',
       location: event.venue || '',
-      category: event.eventType || event.attendanceType || 'Festival',
+      category: event.eventType || (event.attendanceType === 'free' ? undefined : event.attendanceType) || 'Festival',
       };
     })
     .filter((event) => event.date || event.time);
